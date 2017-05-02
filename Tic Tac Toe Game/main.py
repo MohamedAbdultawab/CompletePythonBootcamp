@@ -125,11 +125,13 @@ def play():
 			print_board(**db)
 			if win(db) is not None:
 				print(win(db))
-				replayf()
+				if replayf() is False:
+					break
 				continue
 			if full_board_check() is not False:
 				print('Game over')
-				replayf()
+				if replayf() is False:
+					break
 				continue
 
 			move(p2)
@@ -137,12 +139,15 @@ def play():
 			print_board(**db)
 			if win(db) is not None:
 				print(win(db))
-				replayf()
+				if replayf() is False:
+					break
 				continue
 			if full_board_check() is not False:
 				print('Game over')
-				replayf()
+				if replayf() is False:
+					break
 				continue
+
 			
 
 
