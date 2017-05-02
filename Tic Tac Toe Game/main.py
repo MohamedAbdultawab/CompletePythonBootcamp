@@ -119,24 +119,31 @@ def play():
 		p1, p2 = random_player()
 		while True:
 			print_board(**db)
+
 			move(p1)
 			moves += 1
+			print_board(**db)
 			if win(db) is not None:
 				print(win(db))
 				replayf()
+				continue
 			if full_board_check() is not False:
 				print('Game over')
 				replayf()
-			print_board(**db)
+				continue
+
 			move(p2)
 			moves += 1
+			print_board(**db)
 			if win(db) is not None:
 				print(win(db))
 				replayf()
+				continue
 			if full_board_check() is not False:
 				print('Game over')
 				replayf()
-			print_board(**db)
+				continue
+			
 
 
 play()
