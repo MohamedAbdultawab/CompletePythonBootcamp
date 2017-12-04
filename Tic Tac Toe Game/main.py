@@ -1,4 +1,3 @@
-# بسم الله الرحمن الرحيم
 import os
 from random import randint
 
